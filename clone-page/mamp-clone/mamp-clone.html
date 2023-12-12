@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./mamp-clone.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-ul">
+            <li class="nav-li"><a class="nav-link" href="#">Start</a></li>
+            <li class="nav-li"><a class="nav-link" href="#">My Website</a></li>
+            <li class="nav-li"><a class="nav-link" href="#">phpInfo</a></li>
+            <li class="nav-li"><a class="nav-link" href="#">Tools</a></li>
+            <li class="nav-li"><a class="nav-link" href="#">FAQ</a></li>
+            <li class="nav-li"><a class="nav-link" href="#">MAMP Website</a></li>
+        </ul>
+        <ul class="nav-ul">
+            <li class="nav-li btn-buy"><a class="nav-link" href="#">Buy MAMP PRO</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="slide-show-container">
+            <ol class="slide-indicators">
+                <li class="indicator active" data-index="0"></li>
+                <li class="indicator" data-index="1"></li>
+            </ol>
+            <div class="slide-show-content">
+                <section class="slide-item current" data-index="0">
+                        <img src="./mampLogoCarouselLeft.png" alt="mamp logo">
+                        <div class="item-text">
+                            <h1>Welcome!</h1>
+                            <h2>MAMP Has been installed successfully.</h2>
+                        </div>
+                        <img src="./checkmarkCarouselRight.png" alt="right tick">
+                </section>
+                <section class="slide-item" data-index="1">
+                        <img src="./627.png" alt="mamp logo">
+                        <div class="item-text">
+                            <h1>Now available:</h1>
+                            <h2>MAMP & MAMP PRO 4</h2>
+                            <a class="btn-download" href="#">Download now!</a>
+                        </div>
+                        <img src="./923.png" alt="">
+                </section>
+            </div> <!-- slide-show content ends -->
+        </div> <!-- slide-show container ends -->
+    </header>
+    <main>
+        <section>
+            <div class="frame">
+                <div class="card">
+                    <h2>PHP</h2>
+                    <p>phpinfo shows the current configuration of PHP.</p>
+                </div>
+
+                <div class="card">
+                    <h2>MySQL</h2>
+                    <p>MySQL can be administered with phpMyAdmin.</p>
+                </div>
+
+                <div class="card">
+                    <p>To connect to the MySQL server from your own scripts use the following connection parameters</p>
+                    <table class="table">
+                        <caption></caption>
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <th>Host</th>
+                                <td>localhost</td>
+                            </tr>
+                            <tr>
+                                <th>Port</th>
+                                <td>3306</td>
+                            </tr>
+                            <tr>
+                                <th>User</th>
+                                <td>root</td>
+                            </tr>
+                            <tr>
+                                <th>Password</th>
+                                <td>root</td>
+                            </tr>
+                            <tr>
+                                <th>Socket</th>
+                                <td>/Applications/MAMP/tmp/mysql/mysql.sock</td>
+                            </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h2>Examples</h2>
+                    <ul class="tab-bar">
+                        <li class="tab active" data-href="php55"><a href="#php55">PHP &lt;= 5.5</a></li>
+                        <li class="tab" data-href="php56"><a href="#php56">PHP &gt;= 5.6</a></li>
+                        <li class="tab" data-href="python"><a href="#python">Python</a></li>
+                        <li class="tab" data-href="perl"><a href="#perl">Perl</a></li>
+                    </ul>
+                </div>
+
+                <div class="card">
+
+                    <div class="code-frame active" id="php55">
+                        <pre>
+$user = 'root';
+$password = 'root';
+$db = 'inventory';
+$host = 'localhost';
+$port = 3306;
+
+$link = mysql_connect(
+    "$host:$port", 
+    $user, 
+    $password
+);
+$db_selected = mysql_select_db(
+    $db, 
+    $link
+);
+                        </pre>
+                    </div>
+
+                    <div class="code-frame" id="php56">
+                        <pre>
+$user = 'root';
+$password = 'root';
+$db = 'inventory';
+$host = 'localhost';
+$port = 3306;
+
+$link = mysqli_init();
+$success = mysqli_real_connect(
+    $link, 
+    $host, 
+    $user, 
+    $password, 
+    $db,
+    $port
+);
+                        </pre>
+                    </div>
+
+                    <div class="code-frame" id="python">
+                        <pre>
+import mysql.connector
+
+config = {
+    'user': 'root',
+    'password': 'root',
+    'host': 'localhost:3306',
+    'database': 'inventory',
+    'raise_on_warnings': True,
+}
+
+link = mysql.connector.connect(**config)
+                        </pre>
+                    </div>
+
+                    <div class="code-frame" id="perl">
+                        <pre>
+use DBI;
+
+my $user = 'root';
+my $password = 'root';
+my $db = 'inventory';
+
+my $link = DBI->connect(
+"DBI:mysql:database=$db", 
+$user, 
+$password
+);
+                        </pre>
+                    </div>
+
+                </div> <!-- card end-->
+            </div> <!-- frame end -->
+
+            <div class="frame">
+                <div class="card">
+                    <img src="./appsolute-logo.png" alt="appsolute logo">
+                    <p>MAMP and MAMP PRO are developed and distributed by appsolute GmbH.</p>
+                </div>
+                    <img src="./4logos.png" alt="apche mysql nginx php">
+            </div>
+        </section>
+
+        <section>
+            <div class="frame">
+                <h2>MAMP Version</h2>
+                <h4>3.3.1 → Your version is up-to-date.</h4>
+            </div>
+
+            <div class="frame">
+                <div class="card">
+                    <h2>News</h2>
+                    <h4><a href="#">MAMP & MAMP PRO 4.1.1 out now</a></h4>
+                    <ul>February, 2017 – Version 4.1.1 is out now - comes with German localization
+                        <li> Added german localisation</li>
+                        <li> Initial TouchBar support on MacBook Pro 2016</li>
+                        <li>Automatically deleting a database when deleting a host fixed</li>
+                        <li>Some functions can now only be used if the active servers are using the current configuration</li>
+                        <li>Solved PHP 7.1 configuration quirks</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <ul>New components:
+                        <li>MySQL 5.6.35</li>
+                        <li>PHP 5.6.29, 5.6.30, 7.0.14, 7.0.15 & 7.1.1</li>
+                        <li>Python 2.7.13</li>
+                        <li>libpng 1.6.27</li>
+                        <li>phpMyAdmin 4.6.5.2</li>
+                        <li>curl 7.52.1</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4><a href="#">Happy New Year! MAMP & MAMP PRO 4.1 has just been released</a></h4>
+                    <ul>January, 2017 – Happy New Year! MAMP & MAMP PRO Version 4.1 is out now
+                        <li>Exposed Memcached (the distributed memory object caching system) settings in the GUI</li>
+                        <li>Certificate chain files no longer need to have .key as a file type</li>
+                        <li>The application starts considerably faster</li>
+                        <li>Better server status detection</li>
+                        <li>Dragging & dropping assets to the sidebar does now work</li>
+                        <li>Dragging & dropping a file to a source text automatically inserts a link or path</li>
+                        <li>Text selection is preserved when switching files</li>
+                        <li>Template editor now uses the font and color settings from the Font & Colors section</li>
+                        <li>The color for placeholders in template files can now customized</li>
+                        <li>Three (adjustable) font & color presets: Standard, Plain, Dark</li>
+                        <li>Font quirks in the editor resolved</li>
+                        <li>Post-installed PHP versions will now function in CGI mode</li>
+                        <li>Pear configuration for PHP versions 7.0.x fixed</li>
+                        <li>Changes to php.ini templates allow for a more flexible configuration by the user</li>
+                        <li>Improved Ruby gem build process</li>
+                        <li>Fixed a crash in the Postfix configuration</li>
+                        <li>New components: Igbinary 2.0.0 for PHP (replaces msgpack)</li>
+                        <li>Internal optimizations and bug fixes</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4><a href="#">MAMP & MAMP PRO 4.0.6 has just been released</a></h4>
+                    <ul>October, 2016 – MAMP & MAMP PRO Version 4.0.6 is out now
+                        <li>One-click activation of PHP extensions</li>
+                        <li> Nginx hosts do now accept custom statements in the location directive.</li>
+                        <li>Added the ability to use a certificate chain file for Apache SSL hosts</li>
+                        <li>Added an option to only accept TLS connections for SSL hosts</li>
+                        <li>CGI mode processes now use meaningful socket names</li>
+                        <li>Nginx now uses the correct WebStart page</li>
+                        <li>/etc/hosts is no longer accidentally reset</li>
+                        <li>Postfix configuration data is saved correctly</li>
+                        <li>Command line language interpreters use correct config file</li>
+                        <li>Command line config of language interpreters honors symbolic links</li>
+                        <li>MAMP PRO can now be controlled from the command line</li>
+                        <li>Servers restart correctly after updating a component</li>
+                        <li>Upon server failure the spinning indicator will work as expected.</li>
+                        <li>Corrected some GUI quirks</li>
+                        <li>Nameless bugs fixed</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4><a href="#">Follow us on Twitter</a></h4>
+                    <p>28th October, 2014 - Get our latest news on Twitter</p>
+                </div>
+                
+                <div class="card">
+                    <p>If you want to get our latest news or contact us quickly. you can to join us on Twitter.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section>
+            <p>© 2013 - 2016 <a href="#">appsolute GmbH</a></p>
+        </section>
+        <section>
+            <p><a href="#">Back to top</a></p>
+        </section>
+    </footer>
+    <script src="./mamp-clone.js"></script>
+</body>
+
+</html>
