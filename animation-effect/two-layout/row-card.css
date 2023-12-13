@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+}
+body{
+    background-color: tan;
+}
+#btn-layout{
+    margin: 10px 10px 5px;
+    padding: 5px 20px;
+    border: 5px solid steelblue;
+    border-radius: 10px;
+}
+.row{
+    margin: auto;
+    width: fit-content;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.row .record{
+    display: flex;
+}
+.row .country{
+    padding: 5px 10px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+}
+.row .capital{
+    padding: 5px 10px;
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+}
+.row .continent{
+    padding: 5px 10px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+}
+.record:nth-child(even){
+    background-color: gold;
+}
+.record:nth-child(odd){
+    background-color: silver;
+}
+.card{
+    margin: auto;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card .record{
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    overflow: hidden;
+}
+.card .country{
+    width: auto;
+    background-color: chocolate;
+}
+.card .capital{
+    width: auto;
+    background-color: transparent;
+}
+.card .continent{
+    width: auto;
+    background-color: chocolate;
+}
+
