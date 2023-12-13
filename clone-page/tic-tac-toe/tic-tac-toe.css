@@ -37,6 +37,13 @@ body{
 .cell:last-child{
     border-right: 0;
 }
+.cell.cross,
+.cell.circle{
+    cursor: not-allowed;
+}
+.cell.empty{
+    cursor: pointer;
+}
 
 .cross::before,
 .cross::after, 
