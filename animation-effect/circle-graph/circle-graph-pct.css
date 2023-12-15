@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: gold;
+}
+main{
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.chart{
+    margin: 50px 5%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.chart .circle{
+    width: 160px;
+    height: 160px;
+    border: 20px solid cornflowerblue;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chart .circle.h{
+    z-index: 100;
+}
+.chart .circle::before{
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    content: attr(data-pct) "%";
+    position: absolute;
+}
+.chart .left-circle{
+    width: 160px;
+    height: 160px;
+    border: 20px solid #ccc;
+    border-radius: 50%;
+    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+    position: absolute;
+}
+.chart .left-circle.under-50{
+    transform: rotate(0deg) !important;
+}
+.chart .right-circle{
+    width: 160px;
+    height: 160px;
+    border: 20px solid #ccc;
+    border-radius: 50%;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+    position: absolute;
+}
+.chart .right-circle.over-50{
+    transform: rotate(0deg) !important;
+    border-color: cornflowerblue !important;
+    z-index: 50;
+}
+
+aside{
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

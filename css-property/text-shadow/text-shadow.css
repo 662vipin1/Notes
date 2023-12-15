@@ -1,0 +1,22 @@
+body{
+    background-color: #333;
+}
+.main{
+    height: 25vw;
+    color: springgreen;
+    font-size: 2vw;
+    line-height: 1.4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    user-select: none;
+}
+h1:hover{
+    color: chocolate;
+    text-shadow: -10px -3vw 0px cadetblue, 10px 3vw 0px cornflowerblue,
+    -20px -6vw 2px gold, 20px 6vw 2px goldenrod,
+    -30px -9vw 4px lime, 30px 9vw 4px limegreen,
+    -40px -12vw 5px yellow, 40px 12vw 5px yellowgreen;
+    transition: text-shadow .5s linear, color .5s linear;
+    /* text-shadow: horizontal vertical blurRadius shadowColor */
+}

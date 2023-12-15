@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 20px;
+    line-height: 1.7;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+code {
+    font-weight: 500;
+}
+main {
+height: 400px;
+width: 400px;
+
+overflow-y: scroll;
+scroll-snap-type: y mandatory;
+
+/* scroll-snap-stop: always; 
+This third property is very much like manatory vs proximity
+doesn't work in IE, Edge, Firefox, or Safari */
+}
+section {
+    padding: 2rem;
+    width: 400px;
+    height: 400px;
+    color: white;
+    background-color: hsl(220, 50%, 40%);
+    border: 1px solid #ccc;
+    font-size: 1.4rem;
+    font-weight: 100;
+    scroll-snap-align: start;
+}
+section:nth-of-type(2n) {
+    background-color: hsl(270, 50%, 40%);
+    scroll-snap-align: center;
+}
+section:nth-of-type(3n) {
+    background-color: hsl(120, 50%, 40%);
+    scroll-snap-align: end;
+}

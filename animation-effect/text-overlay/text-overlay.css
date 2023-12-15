@@ -1,0 +1,53 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #ffe593;
+}
+header > h1{
+    margin: .5em 0px;
+    font-size: 40px;
+}
+.main{
+    margin: 10px auto;
+    width: 95%;
+    display: block;
+}
+.gallary{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.item > img{
+    width: 300px;
+    height: auto;
+    display: block;
+}
+.label{
+    margin: 0;
+    padding: 0 10px;
+    width: 300px;
+    height: 3rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    /* old way for shifting background with text */
+    /* margin-top: -3rem; */
+    /* position: relative; */
+    /* new way for shifting background with text */
+    transform: translateY(-3rem);
+    margin-bottom: -3rem;
+}
