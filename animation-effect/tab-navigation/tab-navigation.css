@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    font-size: 20px;
+    line-height: 1.5;
+}
+header{
+    padding: 1rem 2rem 0.5rem 2rem;
+    background-color: lightgrey;
+    border-bottom: 1rem solid #777;
+    display: flex;
+    align-items: center;
+}
+header > h1{
+    font-size: 3rem;
+}
+.nav-bar{
+    border-bottom: 1px solid #777;
+}
+.tab-menu{
+    padding-bottom: 0.2rem;
+    list-style: none;
+    list-style-position: inside;
+    display: flex;
+    justify-content: space-around;
+}
+.tab{
+    font-size: 1.2rem;
+    padding: 0 2rem;
+}
+.tab.active,
+.tab:hover{
+    color: rebeccapurple;
+    border-bottom: 0.2rem solid rebeccapurple;
+}
+main{
+    padding: 2rem 2rem 1rem;
+}
+main h2{
+    font-size: 2rem;
+}
+main p{
+    font-size: 1rem;
+}
+.tab-content{
+    display: none;
+}
+.tab-content.active{
+    display: block;
+}
