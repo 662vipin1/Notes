@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: antiquewhite;
+}
+header{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100px;
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+}
+header > h1{
+    width: 100%;
+    font-size: 60px;
+    line-height: 1.5;
+    text-align: center;
+}
+header > div.bar{
+    height: 2px;
+    background-color: cornflowerblue;
+    outline: 2px solid rgba(0, 50, 70, 0.2);
+    position: absolute;
+    bottom: 0;
+}
+main{
+    box-sizing: border-box;
+    margin: 100px auto 0px auto; /*push the main below header*/
+    padding: 20px 0px;
+    width: 70%;
+}
+main > p{
+    padding: 0px 10px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+}
