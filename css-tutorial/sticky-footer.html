@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky Footers</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body{
+            min-height: 100vh;
+            position: relative;
+        }
+        header{
+            background-color: hsl(60, 30%, 80%);
+        }
+        main{
+            padding-bottom: 5rem;
+        }
+        footer{
+            background-color: hsl(60, 30%, 80%);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 4rem;
+        }
+        @supports (display:grid){
+            body{
+                position: static;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+            }
+            main{
+                padding-bottom: 1rem;
+            }
+            footer{
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sticky Footers</h1>
+    </header>
+    <main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam officiis inventore. Provident quam reiciendis esse cupiditate! Tenetur sapiente asperiores voluptatem voluptatum explicabo molestias, praesentium ad! Suscipit delectus molestias commodi.</p>
+        <p>Earum debitis ea doloremque ut, expedita praesentium sed architecto iusto eveniet eaque fugit illum labore vero ullam pariatur, libero et, dolor unde iste aut inventore. Ut vero illum debitis perferendis.</p>
+        <p>Mollitia provident esse, doloribus sed quisquam quaerat tenetur, eius rerum pariatur eaque nulla, optio hic illo ducimus earum placeat magnam quam. Tenetur ducimus a excepturi accusantium, quisquam exercitationem sed ullam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam fugiat consequatur similique quo voluptatem omnis, dolore quia eos doloribus atque, nostrum sequi blanditiis, cupiditate corporis accusamus cumque minima placeat laborum.</p>
+        <p>Sint debitis libero ea aliquam eveniet tenetur eaque voluptate labore quam qui fugit impedit perspiciatis possimus magnam, eum sunt quae, dolorum distinctio nemo! Officia ipsum aspernatur fuga. Sequi, vel, totam!</p>
+        <p>Saepe, voluptas, sunt. Vero quos pariatur amet, commodi suscipit eum quidem nam in sapiente vitae esse obcaecati, molestias, repellendus nihil, ipsa iure ullam dicta non labore sequi doloremque harum nemo.</p>
+        <p>Architecto quidem at, pariatur amet accusamus ad delectus, quisquam inventore natus harum ab distinctio, placeat atque, perspiciatis eum alias! Sequi necessitatibus minus reprehenderit, voluptatem corporis aliquam eaque dolores exercitationem vero.</p>
+    </main>    
+    <footer>
+        <p>&copy; 2018 Squid Inc.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            padding: 10px;
+            height: 60px;
+            position: relative;
+            background-color: hsla(220, 70%, 30%, 1);
+        }
+        .burger {
+            position: absolute;
+            width: 54px;
+            height: 0px;
+            background-color: white;
+            border: 3px solid white;
+            top: 37px;
+            left: 10px;
+            transition: all 200ms linear;
+        }
+        .burger::before, .burger::after {
+            display: block;
+            position: absolute;
+            width: 54px;
+            height: 0px;
+            background-color: white;
+            border: 3px solid white;
+            content: "";
+            left: -3px;
+            transition: all 200ms linear;
+        }
+        .burger::before {
+            top: -19px;
+            /**3px down because always trying to be inside content box**/
+            /**-3px to align before-element with the element
+            -16px is the displacement**/
+        }
+        .burger::after {
+            top: 13px;
+            /**3px down because always trying to be inside content box**/
+            /**after-element is already 3px down from the center
+            so only 13px is required to make displacement of 16px**/
+        }
+        .x .burger {
+            background-color: transparent;
+            border: 3px solid transparent;
+        }
+        .x .burger::before {
+            transform: translate(0px, 16px) rotate(45deg);
+        }
+        .x .burger::after {
+            transform: translate(0px, -16px)  rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <div class="burger" id="burger"></div>
+    </div>
+    <script>
+        let box = document.getElementById('box');
+        box.addEventListener('click', toggleMenu);
+        function toggleMenu(){
+            box.classList.toggle('x');
+        }
+    </script>
+</body>
+</html>

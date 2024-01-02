@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger General Case</title>
+    <style>
+        body {
+            background-color: yellow;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        :root {
+            --burger-height: 6px;
+            --burger-width: calc(10 * var(--burger-height));
+            --displacement: calc(2.5 * var(--burger-height));
+            --burger-container-height: calc(11 * var(--burger-height));
+            --burger-container-width: calc(15 * var(--burger-height));
+            --angle: 45deg;
+            --ttime: 200ms;
+        }
+        .box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: var(--burger-container-width);
+            height: var(--burger-container-height);
+            background-color: hsla(220, 70%, 30%, 1);
+        }
+        .burger, .burger::before, .burger::after {
+            width: var(--burger-width);
+            height: var(--burger-height);
+            background-color: white;
+        }
+        .burger {
+            position: relative;
+            transition: background-color var(--ttime) linear;
+        }
+        .burger::before, .burger::after {
+            display: block;
+            position: absolute;
+            content: "";
+            left: 0;
+            transition: transform var(--ttime) linear;
+        }
+        .burger::before {
+            top: calc(-1 * var(--displacement));
+            /* bottom: var(--displacement); */
+        }
+        .burger::after {
+            top: var(--displacement);
+            /* bottom: calc(-1 * var(--displacement)); */
+        }
+        .x .burger {
+            background-color: transparent;
+        }
+        .x .burger::before {
+            transform: translateY(var(--displacement)) rotate(var(--angle));
+        }
+        .x .burger::after {
+            transform: translateY(calc(-1 * var(--displacement)))  rotate(calc(-1 * var(--angle)));
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <div class="burger" id="burger"></div>
+    </div>
+    <script>
+        let box = document.getElementById('box');
+        box.addEventListener('click', toggleMenu);
+        function toggleMenu(){
+            box.classList.toggle('x');
+        }
+    </script>
+</body>
+</html>

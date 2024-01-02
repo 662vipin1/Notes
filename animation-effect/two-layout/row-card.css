@@ -51,7 +51,7 @@ body{
 }
 .card{
     margin: auto;
-    width: 1000px;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
